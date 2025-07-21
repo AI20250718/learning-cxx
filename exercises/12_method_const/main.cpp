@@ -5,7 +5,10 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) {
+    // int get(int i) {
+    // };
+    int get(int i) const {// Fibonacci::get 支持 constexpr 对象（如 FIB）
+        return numbers[i];
     }
 };
 
