@@ -23,7 +23,8 @@ void set(std::map<k, v> &map, k key, v value) {
     // TODO: 实现函数
     // m["CPU"] = 25;
     // map.insert(key, value);//[k] = v;
-    map.insert(std::make_pair(key, value));
+    // map.insert(std::make_pair(key, value));
+    map[key] = value;
     // map.emplace(std::make_pair(key, value));
     // map.in
 }
