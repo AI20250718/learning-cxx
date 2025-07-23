@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
     A ab = B(5);// 然而这个代码可以编译和运行！
     // THINK: 观察打印出的信息，推测把大象放进冰箱分几步？
     // THINK: 这样的代码是“安全”的吗？
-    // NOTICE: 真实场景中不太可能出现这样的代码-
+    // NOTICE: 真实场景中不太可能出现这样的代码--
 
     i = 0;
     std::cout << std::endl
