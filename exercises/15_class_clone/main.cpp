@@ -34,7 +34,7 @@ public:
     // 斐波那契数列，带缓存优化
     size_t get(int i) {
         // ASSERT(i < cached, "i out of range");
-        for (; cached < i; ++cached) {
+        for (; cached <= i; ++cached) {
             cache[cached] = cache[cached - 1] + cache[cached - 2];
         }
         return cache[i];
