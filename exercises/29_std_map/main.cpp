@@ -7,11 +7,25 @@
 template<class k, class v>
 bool key_exists(std::map<k, v> const &map, k const &key) {
     // TODO: 实现函数
+    // if (auto search = map.find(key); search != map.end()) {
+    //     std::cout << "Found " << search->first << ' ' << search->second << '\n';
+    //     return true;
+    // } else {
+    //     std::cout << "Not found\n";
+    //     return false;
+    // }
+
+    return map.find(key) != map.end();
 }
 
 template<class k, class v>
 void set(std::map<k, v> &map, k key, v value) {
     // TODO: 实现函数
+    // m["CPU"] = 25;
+    // map.insert(key, value);//[k] = v;
+    map.insert(std::make_pair(key, value));
+    // map.emplace(std::make_pair(key, value));
+    // map.in
 }
 
 // ---- 不要修改以下代码 ----
@@ -31,6 +45,8 @@ int main(int argc, char **argv) {
     ASSERT(secrets["Infini"] == "Tensor", "Infini -> Tensor");
 
     set(secrets, "hello"s, "developer"s);
+    std::cout << secrets["hello"] << std::endl;
+
     ASSERT(secrets["hello"] == "developer", "hello -> developer");
 
     return 0;
